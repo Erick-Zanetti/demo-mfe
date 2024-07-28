@@ -23,7 +23,7 @@
             },
             "outputPath": "dist/host-app",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -67,9 +67,7 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "customWebpackConfig": {
-              "path": "./webpack.config.js"
-            }
+            "buildTarget": "host-app:build"
           },
           "configurations": {
             "production": {
