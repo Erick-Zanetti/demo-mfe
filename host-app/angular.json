@@ -15,15 +15,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "customWebpackConfig": {
-              "path": "./webpack.config.js",
-              "replaceDuplicatePlugins": true
-            },
             "outputPath": "dist/host-app",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -65,10 +61,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
-          "options": {
-            "buildTarget": "host-app:build"
-          },
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "host-app:build:production"
@@ -105,8 +98,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "2409a0bb-749e-46ca-acb6-2f898a019812"
   }
 }
