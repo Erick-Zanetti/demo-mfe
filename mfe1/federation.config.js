@@ -5,7 +5,7 @@ module.exports = withNativeFederation({
   name: 'mfe1',
 
   exposes: {
-    './Component': './src/app/app.component.ts',
+    "./routes": "./src/app/app.routes.ts",
   },
 
   shared: {
@@ -17,10 +17,5 @@ module.exports = withNativeFederation({
     'rxjs/fetch',
     'rxjs/testing',
     'rxjs/webSocket',
-    // Add further packages you don't need at runtime
   ]
-
-  // Please read our FAQ about sharing libs:
-  // https://shorturl.at/jmzH0
-  
 });

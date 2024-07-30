@@ -1,0 +1,19 @@
+nav {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+nav a.active-link {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.content {
+  padding: 2rem;
+}
