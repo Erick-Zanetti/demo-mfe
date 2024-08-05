@@ -6,6 +6,7 @@ module.exports = withNativeFederation({
 
   exposes: {
     './Component': './src/app/app.component.ts',
+    './AnimatedBox': './src/app/components/animated-box/animated-box.component.ts',
   },
 
   shared: {
@@ -22,5 +23,5 @@ module.exports = withNativeFederation({
 
   // Please read our FAQ about sharing libs:
   // https://shorturl.at/jmzH0
-  
+
 });
