@@ -26,10 +26,10 @@ export class CrudComponent implements OnInit {
 
     const m = await loadRemoteModule({
       remoteEntry: 'http://localhost:4202/remoteEntry.json',
-      exposedModule: './AnimatedBox'
+      exposedModule: './ExposeAnimatedBox'
     });
 
-    const ref = this.viewContainer.createComponent(m.AnimatedBoxComponent);
+    const ref = this.viewContainer.createComponent(m.ExposeAnimatedBoxComponent);
     // const compInstance = ref.instance;
   }
 }

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-animated-box',
@@ -10,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimatedBoxComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.fetchData().subscribe((data) => {
+      console.log("AnimatedBoxComponent:" + JSON.stringify(data));
+    });
   }
 
 }
